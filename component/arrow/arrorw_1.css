@@ -2,14 +2,59 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
+
+.arrow::before,
+[class*="arrow"]::before {
+    white-space: nowrap !important;   
+    display: inline-block !important; 
+    line-height: 1 !important;
+    padding: 0;
+    margin: 0;
+}
+
   .arrow-wrapper {
       height: 150px;            
       display: flex;
       flex-direction: column;
       align-items: center;
   }
+
+ .arrow-up {
+      transform: rotate(-90deg);
+      transform-origin: center center;
+  }
+
+  .arrow-up-right {
+      transform: rotate(-40deg);
+      transform-origin: center center;
+  }
+
+  .arrow-mid {
+      transform: rotate(0deg);
+  }
+
+  .arrow-down {
+    transform: rotate(90deg);
+    transform-origin: center center;
+  }
+
+  .arrow-down-right {
+    transform: rotate(50deg);
+    transform-origin: center center;
+  }
+
+  .arrow-down-left {
+    transform: rotate(130deg);
+    transform-origin: center center;
+  }
+
+  .machine-column.right .arrow-down,
+  .machine-column.right .arrow-mid,
+  .machine-column.right .arrow-up {
+      transform-origin: right center;
+  }
+  
 
   .arrow-long::before {
       content: "› › › › › › › › › › › › › › › › › › › › ";

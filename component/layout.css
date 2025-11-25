@@ -11,11 +11,23 @@
   grid-template-columns: auto auto auto auto auto auto auto; 
   grid-template-rows: auto auto auto auto auto auto; 
   align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 5px;
+  margin-top: 5px;
   justify-content: center;
   /* height: 100vh; */
 }
+
+.room-layout-9 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto; 
+  grid-template-rows: auto auto auto auto ; 
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
 
 .row {
     display: flex;
@@ -23,16 +35,6 @@
     justify-content: center;
     gap: 10px;
 }
-
-.column-1,
-.column-2,
-.column-3,
-.column-4,
-.column-5 {
-    flex-direction: column;
-    align-items: center;
-}
-
 
 .column-1 {
     grid-column: 1;             
@@ -72,6 +74,18 @@
 
 .column-7 {
     grid-column: 7;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-8 {
+    grid-column: 8;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-9 {
+    grid-column: 9;             
     justify-content: center;
     align-items: center;           
 }
