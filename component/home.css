@@ -1,7 +1,8 @@
 .house-container {
     position: relative;
     width: 100%;
-    height: 40%;  
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,20 +10,21 @@
 
 .house-img {
     width: 100%;
-    height: 100%;
+    max-width: 600px;
     object-fit: contain;
     display: block;
 }
 
 .card-container {
     position: absolute;
-    top: 50%;              
+    bottom: 30%;         
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
     gap: 25px;
     z-index: 10;
 }
+
 
 .card {
     width: 180px;
