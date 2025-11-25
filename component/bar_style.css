@@ -26,6 +26,17 @@ body {
   color: var(--text-main);
 }
 
+.bg-img {
+    background:
+        linear-gradient(rgba(185, 185, 185, 0.45), rgba(85, 85, 85, 0.45)),
+        url("../Img/aisin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
 .app {
   display: flex;
   min-height: 100vh;

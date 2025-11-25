@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AISIN DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="component/layout.css">
+        <link rel="stylesheet" href="component/bar_style.css">
+        <link rel="stylesheet" href="component/status_style.css">
+        <link rel="stylesheet" href="component/header_style.css">
+        <link rel="stylesheet" href="component/home.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo-block">
+      <div class="logo">PRO<span>TOOL</span></div>
+      <div class="logo-sub">PROTOOL (THAILAND) Co., Ltd.</div>
+      <div class="nav-text">
+        <div class="nav-title">DASHBOARD</div>
+        
+        <div class="nav-item active" onclick="window.location.href='index.html'">
+          <div class="nav-icon">
+            <iconify-icon icon="iconamoon:home" width="18" height="18"></iconify-icon>
+          </div>
+          HOME
+        </div>
+        
+        <div class="nav-item" onclick="window.location.href='qc_room.html'">
+          <div class="nav-icon">
+            <iconify-icon icon="material-symbols:meeting-room-outline-rounded" width="18" height="18" ></iconify-icon>
+          </div>
+          QC
+        </div>
+
+        <div class="nav-item" onclick="window.location.href='production_room.html'">
+          <div class="nav-icon">
+            <iconify-icon icon="material-symbols:meeting-room-outline-rounded" width="18" height="18" ></iconify-icon>
+          </div>
+          Production
+        </div>
+    </div>
+  </aside>
+
+<!-- //////////////////////////////////////// STATUS //////////////////////////////////////// -->
+ 
+<main class="main">
+<!-- //////////////////////////////////////// HEADER //////////////////////////////////////// -->
+ 
+    <section class="room-header">
+        <div class="card-bg">AISIN DASHBOARD</div>
+    </section>
+
+    <section class="room-layout-home">
+        <h1>FOCTORY</h1> 
+    <hr class="hr-bt"/> 
+        <div class="card-container"> 
+            <div class="card" style="background:#1581BF;"  onclick="window.location.href='qc_room.html'">
+              QC ROOM
+            </div>
+            <div class="card" style="background:#F6B1CE;"  onclick="window.location.href='production_room.html'">
+              Production
+            </div>
+        </div>
+    
+    </section>        
+</main>
+</body>
+</html>
