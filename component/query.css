@@ -1,0 +1,166 @@
+    .status-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .status-card {
+      height: 58px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2f5faf, #6b92d9);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+    }
+
+    .status-card:nth-child(2) { opacity: 0.9; }
+    .status-card:nth-child(3) {
+      opacity: 0.7;
+      background: var(--primary-light);
+      box-shadow: none;
+    }
+
+    .room-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 4px;
+    }
+
+    .room-title h1 {
+      font-size: 28px;
+      margin-top: 2px;
+    }
+
+    .room-subtitle {
+      margin-top: 4px;
+      font-size: 20px;
+      color: var(--text-soft);
+    }
+
+    .room-right-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    /* filter row */
+
+    .filter-row {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    .filter-label {
+      font-weight: 600;
+    }
+
+    .filter-pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .date-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 13px;
+      color: var(--text-soft);
+      cursor: pointer;
+    }
+
+    .date-input::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+    }
+
+    /* chart area – ให้กราฟกินพื้นที่ที่เหลือทั้งหมด */
+
+    .chart-section {
+      margin-top: 8px;
+      flex: 1;                      /* ใช้พื้นที่ที่เหลือจากด้านบนทั้งหมด */
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      min-height: 0;               /* ป้องกัน flex overflow */
+    }
+
+    .chart-card {
+      width: 100%;
+      max-width: 1200px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+      padding: 16px 22px 20px;
+      border: 1px solid #e5e7eb;
+
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .chart-title {
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    .chart-subtitle {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+
+    .chart-wrapper {
+      flex: 1;          
+      min-height: 0;
+    }
+
+    #okNgChart {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 1200px) {
+      .app {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 0;
+      }
+      .main {
+        padding: 16px;
+      }
+      .chart-card {
+        padding: 12px 14px 16px;
+      }
+    }

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AISIN DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="component/layout.css">
+        <link rel="stylesheet" href="component/bar_style.css">
+        <link rel="stylesheet" href="component/status_style.css">
+        <link rel="stylesheet" href="component/header_style.css">
+        <link rel="stylesheet" href="component/machine_style.css">
+        <link rel="stylesheet" href="component/arrow_style.css">
+        <link rel="stylesheet" href="component/info.css">
+        <link rel="stylesheet" href="component/arrorw.css">
+        <link rel="stylesheet" href="component/arrow_direction.css">
+        <link rel="stylesheet" href="component/mix.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo-block">
+      <div class="logo">PRO<span>TOOL</span></div>
+      <div class="logo-sub">PROTOOL (THAILAND) Co., Ltd.</div>
+      <div class="nav-text">
+        <div class="nav-title">DASHBOARD</div>
+        
+        <div class="nav-item active" onclick="window.location.href='index.html'">
+          <div class="nav-icon">
+            <iconify-icon icon="iconamoon:home" width="18" height="18"></iconify-icon>
+          </div>
+          HOME
+        </div>
+        
+        <div class="nav-item" onclick="window.location.href='dashboard_case_set/dashboard_case_set.html'">
+          <div class="nav-icon">
+            <iconify-icon icon="material-symbols:meeting-room-outline-rounded" width="18" height="18" ></iconify-icon>
+          </div>
+          ROOM
+        </div>
+    </div>
+  </aside>
+
+<!-- //////////////////////////////////////// STATUS //////////////////////////////////////// -->
+ 
+    <main class="main">
+        <!-- <section class="status-section">
+        <div class="label">STATUS</div>
+        <div class="status-row">
+            <div class="status-card"></div>
+            <div class="status-card"></div>
+            <div class="status-card"></div>
+        </div>
+        </section>
+    <hr class="hr-bt"/> -->
+
+
+<!-- //////////////////////////////////////// HEADER //////////////////////////////////////// -->
+ 
+    <section class="room-header">
+        <div class="room-title">
+            <div class="label">AISIN DASHBOARD</div>
+            <h1>QC ROOM 1</h1>
+        </div>
+        <!-- <div class="room-right-label">
+            <label for="room-select" class="label">SELECT ROOM</label>
+                <select id="room-select" class="room-dropdown"  style="margin-top: 4px;">
+                    <option value="qc_room_1.html">QC ROOM 1</option>
+                    <option value="qc_room_2.html">QC ROOM 2</option>
+                </select> -->
+    </section>
+
+    <!-- <script>
+        const currentPage = window.location.pathname.split("/").pop(); 
+        const roomSelect = document.getElementById("room-select");
+
+        for (let i = 0; i < roomSelect.options.length; i++) {
+            if (roomSelect.options[i].value === currentPage) {
+            roomSelect.selectedIndex = i;
+            break;
+            }
+        }
+
+        roomSelect.addEventListener("change", function () {
+            const selectedPage = this.value;
+            if (selectedPage !== currentPage) {
+            window.location.href = selectedPage;
+            }
+        });
+    </script> -->
+
+    <hr class="hr-bt"/>
+
+<section class="room-layout">
+
+<!-- //////////////////////////////////////// DB //////////////////////////////////////// -->
+ 
+    <div class="column-mix" style="grid-row: 1">
+        <div class="row">
+            <article class="info-card">
+                <div class="info-container">
+                    <div class="info-img">
+                        <img src="Img/db.png" alt="DB">
+                    </div>
+                </div>        
+            </article>
+        </div>             
+    </div>
+
+<!-- //////////////////////////////////////// Machine 1 //////////////////////////////////////// -->
+    
+
+
+    <div class="column-1" style="grid-row:5;">
+        <div class="row">
+            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+                <div class="machine-img-container">
+                    <div class="machine-img">
+                        <img src="Img/machine_1.png" alt="Machine 1">
+                    </div>
+                    <div class="machine-meta">
+                        <div class="machine-name">Machine 1</div>
+                            <div class="machine-sub">
+                                <iconify-icon icon="cuida:user-outline" width="18"></iconify-icon>
+                                <span class="machine-username">Mr. Ethan Collins</span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="machine-info">
+                    <div class="machine-status">
+                        <span class="status-text">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Working
+                        </span>
+                        <span class="status-sub">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Stop
+                        </span>
+                    </div>
+                </div>
+            </article>    
+        </div>
+    </div>
+
+<!-- //////////////////////////////////////// Machine 2 //////////////////////////////////////// --> 
+
+    <div class="column-mix-2_4">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-medium arrow-up-l-35"></div>  
+            </article>
+        </div>             
+    </div>
+
+    <div class="column-2" style="grid-row:5;">
+        <div class="row">
+            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+                <div class="machine-img-container">
+                    <div class="machine-img">
+                        <img src="Img/machine_1.png" alt="Machine 1">
+                    </div>
+                    <div class="machine-meta">
+                        <div class="machine-name">Machine 1</div>
+                            <div class="machine-sub">
+                                <iconify-icon icon="cuida:user-outline" width="18"></iconify-icon>
+                                <span class="machine-username">Mr. Liam Anderson</span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="machine-info">
+                    <div class="machine-status">
+                        <span class="status-text">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Working
+                        </span>
+                        <span class="status-sub">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Stop
+                        </span>
+                    </div>
+                </div>
+            </article>    
+        </div>
+    </div>  
+
+    <div class="column-2" style="grid-row:3;">
+        <div class="row">
+            <article class="info-card">
+                <div class="info-container">
+                    <div class="monitor-img">
+                        <img src="Img/monitor_1.png" alt="monitor">
+                    </div>
+                </div>        
+            </article>
+        </div>             
+    </div>
+
+    <div class="column-2" style="grid-row:4;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-right arrow-up"></div>  
+            </article>
+        </div>             
+    </div>
+
+
+<!-- //////////////////////////////////////// Machine 3 //////////////////////////////////////// -->    
+
+    <div class="column-3" style="grid-row:2;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-shot-right arrow-up-l-60"></div>  
+            </article>
+        </div>             
+    </div>        
+
+    <div class="column-3" style="grid-row:5;">
+        <div class="row">
+            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+                <div class="machine-img-container">
+                    <div class="machine-img">
+                        <img src="Img/machine_1.png" alt="Machine 1">
+                    </div>
+                    <div class="machine-meta">
+                        <div class="machine-name">Machine 1</div>
+                            <div class="machine-sub">
+                                <iconify-icon icon="cuida:user-outline" width="18"></iconify-icon>
+                                <span class="machine-username">Mr. Noah Reynolds</span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="machine-info">
+                    <div class="machine-status">
+                        <span class="status-text">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Working
+                        </span>
+                        <span class="status-sub">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Stop
+                        </span>
+                    </div>
+                </div>
+            </article>    
+        </div>
+    </div>
+
+     <div class="column-3" style="grid-row:3;">
+        <div class="row">
+            <article class="info-card">
+                <div class="info-container">
+                    <div class="monitor-img">
+                        <img src="Img/monitor_1.png" alt="monitor">
+                    </div>
+                </div>        
+            </article>
+        </div>             
+    </div>
+
+    <div class="column-3" style="grid-row:4;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-right arrow-up"></div>  
+            </article>
+        </div>             
+    </div>
+
+
+    <!-- //////////////////////////////////////// Machine 4 //////////////////////////////////////// -->    
+
+    <div class="column-4" style="grid-row:2;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-shot-left arrow-up-r-60"></div>  
+            </article>
+        </div>             
+    </div>  
+    
+    <div class="column-4" style="grid-row:5;">
+        <div class="row">
+            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+                <div class="machine-img-container">
+                    <div class="machine-img">
+                        <img src="Img/machine_1.png" alt="Machine 1">
+                    </div>
+                    <div class="machine-meta">
+                        <div class="machine-name">Machine 1</div>
+                            <div class="machine-sub">
+                                <iconify-icon icon="cuida:user-outline" width="18"></iconify-icon>
+                                <span class="machine-username">Ms. Emma Roberts</span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="machine-info">
+                    <div class="machine-status">
+                        <span class="status-text">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Working
+                        </span>
+                        <span class="status-sub">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Stop
+                        </span>
+                    </div>
+                </div>
+            </article>    
+        </div>
+    </div>  
+
+    <div class="column-4" style="grid-row:3;">
+        <div class="row">
+            <article class="info-card">
+                <div class="info-container">
+                    <div class="monitor-img">
+                        <img src="Img/monitor_1.png" alt="monitor">
+                    </div>
+                </div>        
+            </article>
+        </div>             
+    </div>
+
+      <div class="column-4" style="grid-row:4;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-right arrow-up"></div>  
+            </article>
+        </div>             
+    </div>
+
+<!-- //////////////////////////////////////// Machine 5 //////////////////////////////////////// -->
+ 
+    <div class="column-mix-6_4">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-medium arrow-up-r-35"></div>  
+            </article>
+        </div>             
+    </div>
+
+    <div class="column-5" style="grid-row:5;">
+        <div class="row">
+            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+                <div class="machine-img-container">
+                    <div class="machine-img">
+                        <img src="Img/machine_2.png" alt="Machine 1">
+                    </div>
+                    <div class="machine-meta">
+                        <div class="machine-name">Machine 1</div>
+                            <div class="machine-sub">
+                                <iconify-icon icon="cuida:user-outline" width="18"></iconify-icon>
+                                <span class="machine-username">Mr. Ethan Collins</span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="machine-info">
+                    <div class="machine-status">
+                        <span class="status-text">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Working
+                        </span>
+                        <span class="status-sub">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Stop
+                        </span>
+                    </div>
+                </div>
+            </article>    
+        </div>
+    </div>
+
+    <div class="column-5" style="grid-row:3;">
+        <div class="row">
+            <article class="info-card">
+                <div class="info-container">
+                    <div class="monitor-img">
+                        <img src="Img/monitor_1.png" alt="monitor">
+                    </div>
+                </div>        
+            </article>
+        </div>             
+    </div>
+
+    <div class="column-5" style="grid-row:4;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-right arrow-up"></div>  
+            </article>
+        </div>             
+    </div>
+    
+<!-- //////////////////////////////////////// Machine 6 //////////////////////////////////////// --> 
+
+    <div class="column-mix-7_4" style="grid-row:2;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-long arrow-up-r-25"></div>  
+            </article>
+        </div>             
+    </div> 
+
+    <div class="column-6" style="grid-row:5;">
+        <div class="row">
+            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+                <div class="machine-img-container">
+                    <div class="machine-img">
+                        <img src="Img/machine_3.png" alt="Machine 1">
+                    </div>
+                    <div class="machine-meta">
+                        <div class="machine-name">Machine 1</div>
+                            <div class="machine-sub">
+                                <iconify-icon icon="cuida:user-outline" width="18"></iconify-icon>
+                                <span class="machine-username">Mr. Mason Carter</span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="machine-info">
+                    <div class="machine-status">
+                        <span class="status-text">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Working
+                        </span>
+                        <span class="status-sub">
+                            <iconify-icon icon="octicon:dot-fill-16" style="margin-right: 4px;"></iconify-icon>
+                            Stop
+                        </span>
+                    </div>
+                </div>
+            </article>    
+        </div>
+    </div> 
+    
+    <div class="column-6" style="grid-row:3;">
+        <div class="row">
+            <article class="info-card">
+                <div class="info-container">
+                    <div class="monitor-img">
+                        <img src="Img/monitor_1.png" alt="monitor">
+                    </div>
+                </div>        
+            </article>
+        </div>             
+    </div>
+
+   <div class="column-6" style="grid-row:4;">
+        <div class="row">
+            <article class="info-card">      
+                <div class="arrow arrow-right arrow-up"></div>  
+            </article>
+        </div>             
+    </div>
+         
+</section>        
+</main>
+</body>
+</html>

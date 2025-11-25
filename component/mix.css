@@ -1,0 +1,33 @@
+.column-mix {
+    grid-column: 3 / 5;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-mix-1_4 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-mix-7_4 {
+    grid-column: 7 / 4;
+    grid-row: 1 / 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-mix-2_4 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-mix-6_4 {
+    grid-column: 6 / 4;
+    grid-row: 2 / 3;
+    justify-content: center;
+    align-items: center;
+}

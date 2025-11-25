@@ -1,0 +1,113 @@
+.machine-column {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    
+}
+
+.machine-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* leftฝั่ง: card -> arrow ไปกล่องกลาง */
+.machine-column.left .machine-row {
+    grid-column: 1; 
+    justify-content: flex-start;
+}
+
+/* ขวาฝั่ง: arrow <- card */
+.machine-column.right .machine-row {
+    grid-column: 4; 
+    justify-content: flex-end;
+}
+
+.machine-card {
+  display: flex;
+  align-items: flex-start;
+  margin: 5px; 
+}
+
+.machine-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    /* background: #e5e7eb; */
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 8px 20px rgba(148, 163, 184, 0.25); */
+}
+
+.machine-img img {
+    max-width: 200px;
+    max-height: 170px;
+    object-fit: contain;
+    display: block;
+}
+
+.machine-meta {
+    margin-top: 10px;
+}
+
+.machine-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.machine-sub {
+    display: flex;         
+    align-items: center;     
+    gap: 6px;                 
+    font-size: 12px;
+    color: var(--text-soft); 
+    line-height: 1;   
+}
+
+.machine-username {
+  font-size: 16px;
+  margin: 0;           
+}
+
+.machine-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    /* margin-left: 10px; */
+    margin-top: 10px;
+}
+
+.machine-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.status-text {
+    color: var(--status-working);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.status-sub {
+    font-size: 15px;
+    color: var(--text-soft);
+    display: flex;
+    align-items: center;
+}
+
+.status-text iconify-icon,
+.status-sub iconify-icon {
+  flex-shrink: 0;
+  width: 16px; 
+}
+
+.machine-img-container:hover img {
+    cursor: pointer;
+    transform: scale(1.15); 
+}

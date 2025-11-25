@@ -1,0 +1,101 @@
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.room-layout {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto; 
+  grid-template-rows: auto auto auto auto auto auto; 
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.column-1,
+.column-2,
+.column-3,
+.column-4,
+.column-5 {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.column-1 {
+    grid-column: 1;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-2 {
+    grid-column: 2;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-3 {
+    grid-column: 3;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-4 {
+    grid-column: 4;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-5 {
+    grid-column: 5;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-6 {
+    grid-column: 6;             
+    justify-content: center;
+    align-items: center;           
+}
+
+.column-7 {
+    grid-column: 7;             
+    justify-content: center;
+    align-items: center;           
+}
+
+
+.machine-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.machine-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* leftฝั่ง: card -> arrow ไปกล่องกลาง */
+.machine-column.left .machine-row {
+  justify-content: flex-start;
+}
+
+/* ขวาฝั่ง: arrow <- card */
+.machine-column.right .machine-row {
+  justify-content: flex-end;
+}

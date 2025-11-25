@@ -1,0 +1,49 @@
+.main {
+  flex: 1;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.status-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.hr-bt {
+  opacity: 0.3; 
+}
+
+.status-card {
+  height: 90px;
+  border-radius: 20px;
+  background: var(--primary);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+}
+
+.status-card:nth-child(2) { 
+    background: var(--primary-soft);
+}
+.status-card:nth-child(3) {
+  background: var(--primary-light);
+  box-shadow: none;
+}
+
+.hr-bt {
+  opacity: 0.3; 
+}
