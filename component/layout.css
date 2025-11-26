@@ -19,8 +19,7 @@
 
 .room-layout-home {
   display: grid;
-  gap: 24px;
-  margin-top: 20px;
+  gap: 10px;
   padding-left: 20px;
   align-items: flex-start;
 }
