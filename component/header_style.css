@@ -26,12 +26,10 @@
   transition: border 0.2s ease;
 }
 
-/* แค่ hover เปลี่ยนสี */
 .room-dropdown:hover {
   border: 1px solid #3b82f6;
 }
 
-/* ไม่ใช้สีฟ้าใน focus อีก */
 .room-dropdown:focus {
   outline: none;
 }

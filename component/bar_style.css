@@ -36,7 +36,6 @@ body {
 }
 
 
-
 .app {
   display: flex;
   min-height: 100vh;
@@ -45,6 +44,7 @@ body {
 /* ------------ SIDEBAR ------------ */
 .sidebar {
   width: 260px;
+  height: 100vh;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--border-soft);
   padding: 28px 24px;
