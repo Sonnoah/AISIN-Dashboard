@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>AISIN DASHBOARD</title>
+    <title>AISIN Dashboard - QC ROOM 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <link rel="stylesheet" href="component/layout.css">
@@ -21,39 +21,51 @@
 <div class="app">
   <aside class="sidebar">
     <div class="logo-block">
-      <div class="logo">PRO<span>TOOL</span></div>
-      <div class="logo-sub">PROTOOL (THAILAND) Co., Ltd.</div>
-      <div class="nav-text">
+      <div class="logo-container">
+            <img src="Img/logo.png" alt="Logo">
+      </div>
+
+    <hr class="hr-nav"/> 
+
+    <div class="nav-text">
         <div class="nav-title">DASHBOARD</div>
-        
-        <div class="nav-item" onclick="window.location.href='index.html'">
-          <div class="nav-icon">
-            <iconify-icon icon="iconamoon:home" width="18" height="18"></iconify-icon>
-          </div>
-          HOME
-        </div>
-        
-        <div class="nav-item" onclick="window.location.href='qc_room.html'">
-          <div class="nav-icon">
-            <iconify-icon icon="material-symbols:meeting-room-outline-rounded" width="18" height="18" ></iconify-icon>
-          </div>
-          QC
+
+            <div class="nav-item active" onclick="window.location.href='index.html'">
+                <div class="nav-icon">
+                    <iconify-icon icon="iconamoon:home" width="18" height="18"></iconify-icon>
+                </div>
+                <span>HOME</span>
+            </div>
+            
+            <div class="nav-item" onclick="window.location.href='qc_room.html'">
+                <div class="nav-icon">
+                    <iconify-icon icon="fluent:box-search-16-regular" width="18" height="18"></iconify-icon>
+                </div>
+                <span>QC</span>
+            </div>
+
+            <div class="nav-item" onclick="window.location.href='production_room.html'">
+                <div class="nav-icon">
+                    <iconify-icon icon="streamline:production-belt" width="18" height="18"></iconify-icon>
+                </div>
+                <span>PD</span>
+            </div>
         </div>
 
-        <div class="nav-item" onclick="window.location.href='production_room.html'">
-          <div class="nav-icon">
-            <iconify-icon icon="material-symbols:meeting-room-outline-rounded" width="18" height="18" ></iconify-icon>
-          </div>
-          PRODUCTION
+    <hr class="hr-nav"/> 
+        
+        <div class="nav-title">REPORT</div>
+
+            <div class="nav-item" onclick="window.location.href='query.html'">
+                <div class="nav-icon">
+                    <iconify-icon icon="icon-park-outline:doc-search" width="18" height="18"></iconify-icon>
+                </div>
+                <span>QUERY</span>
         </div>
-    </div>
   </aside>
 
-<!-- //////////////////////////////////////// STATUS //////////////////////////////////////// -->
  
-<main class="main">
-<!-- //////////////////////////////////////// HEADER //////////////////////////////////////// -->
- 
+<main class="main"> 
     <section class="room-header">
         <div class="room-title">
             <div class="label">AISIN DASHBOARD</div>
@@ -116,7 +128,7 @@
 
     <div class="column-1" style="grid-row:5;">
         <div class="row">
-            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+            <article class="machine-card" onclick="location.href='query.html'">
                 <div class="machine-img-container">
                     <div class="machine-img">
                         <img src="Img/machine_1.png" alt="Machine 1">
@@ -177,7 +189,7 @@
 
     <div class="column-2" style="grid-row:5;">
         <div class="row">
-            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+            <article class="machine-card" onclick="location.href='query.html'">
                 <div class="machine-img-container">
                     <div class="machine-img">
                         <img src="Img/machine_1.png" alt="Machine 1">
@@ -239,7 +251,7 @@
 
     <div class="column-3" style="grid-row:5;">
         <div class="row">
-            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+            <article class="machine-card" onclick="location.href='query.html'">
                 <div class="machine-img-container">
                     <div class="machine-img">
                         <img src="Img/machine_1.png" alt="Machine 1">
@@ -301,7 +313,7 @@
     
     <div class="column-4" style="grid-row:5;">
         <div class="row">
-            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+            <article class="machine-card" onclick="location.href='query.html'">
                 <div class="machine-img-container">
                     <div class="machine-img">
                         <img src="Img/machine_1.png" alt="Machine 1">
@@ -362,7 +374,7 @@
 
     <div class="column-5" style="grid-row:5;">
         <div class="row">
-            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+            <article class="machine-card" onclick="location.href='query.html'">
                 <div class="machine-img-container">
                     <div class="machine-img">
                         <img src="Img/machine_2.png" alt="Machine 1">
@@ -423,7 +435,7 @@
 
     <div class="column-6" style="grid-row:5;">
         <div class="row">
-            <article class="machine-card" onclick="location.href='dashboard_query.html'">
+            <article class="machine-card" onclick="location.href='query.html'">
                 <div class="machine-img-container">
                     <div class="machine-img">
                         <img src="Img/machine_3.png" alt="Machine 1">
