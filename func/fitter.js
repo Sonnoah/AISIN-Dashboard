@@ -10,7 +10,7 @@ const operators = [
 ];
 
 const models = ["MD-100","MD-200","MD-300","MD-400"];
-const lots = ["A-120","B-335","C-511","D-921"];
+const lots = ["1","2","3","4"];
 
 const machineNames = {
     1: "machine 1", 2: "machine 2", 3: "machine 3", 4: "machine 4", 5: "machine 5",
@@ -21,7 +21,7 @@ const machineNames = {
 let tableData = [];
 let id = 1;
 
-for(let m=1; m<=15; m++){  
+for(let m=1; m<=4; m++){  
     for(let i=0; i<20; i++){
         tableData.push({
             id: id++,
@@ -53,23 +53,21 @@ var table = new Tabulator("#machineTable", {
     ],
 });
 
-// -------------------------------
-// FILTER VARIABLES
-// -------------------------------
+
+////////////// FILTER VARIABLES //////////////
+
 let selectedMachine = "";
 let selectedOperator = "";
 let selectedModel = "";
+let selectedLot = "";
 let searchValue = "";
 
 
-// -------------------------------
-// UPDATE FILTER FUNCTION (AND MODE)
-// -------------------------------
+
 function updateFilters(){
 
     let filters = [];
 
-    // SEARCH (OR SEARCH ACROSS FIELDS)
     if(searchValue !== ""){
         filters.push([
             {field:"date", type:"like", value: searchValue},
@@ -94,52 +92,55 @@ function updateFilters(){
         filters.push({field:"model", type:"=", value:selectedModel});
     }
 
+     // LOT FILTER
+    if(selectedLot !== ""){
+        filters.push({field:"lot", type:"=", value:selectedLot});
+    }
+
     table.setFilter(filters);
 }
 
 
-// -------------------------------
-// SEARCH
-// -------------------------------
+
 document.getElementById("search").addEventListener("keyup", function () {
     searchValue = this.value;
     updateFilters();
 });
 
-
-// -------------------------------
-// MACHINE FILTER
-// -------------------------------
+////////////// MACHINE FILTER //////////////
 document.getElementById("machineFilter").addEventListener("change", function () {
     selectedMachine = this.value;
     updateFilters();
 });
 
+////////////// LOT FILTER //////////////
+document.getElementById("lotFilter").addEventListener("change", function () {
+    selectedLot = this.value;
+    updateFilters();
+});
 
-// -------------------------------
-// OPERATOR FILTER
-// -------------------------------
+
+////////////// OPERATOR FILTER //////////////
 document.getElementById("operatorFilter").addEventListener("change", function () {
     selectedOperator = this.value;
     updateFilters();
 });
 
 
-// -------------------------------
-// MODEL FILTER
-// -------------------------------
+//////////////// MODEL FILTER //////////////
 document.getElementById("modelsFilter").addEventListener("change", function () {
-    selectedModel = this.value;   // ✔ FIXED
+    selectedModel = this.value;   
     updateFilters();
 });
 
 
-// -------------------------------
-// RESET FILTER BUTTON
-// -------------------------------
+
+////////////// RESET FILTER BUTTON //////////////
+
 document.getElementById("resetFilterBtn").addEventListener("click", function () {
 
     selectedMachine = "";
+    selectedLot = "";
     selectedOperator = "";
     selectedModel = "";
     searchValue = "";
@@ -147,6 +148,7 @@ document.getElementById("resetFilterBtn").addEventListener("click", function () 
     document.getElementById("search").value = "";
     document.getElementById("machineFilter").value = "";
     document.getElementById("operatorFilter").value = "";
+    document.getElementById("lotFilter").value = "";
     document.getElementById("modelsFilter").value = "";
 
     table.clearFilter(true);
