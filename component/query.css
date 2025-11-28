@@ -1,166 +1,175 @@
-    .status-section {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
     }
 
-    .label {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    .status-row {
+    .summary-grid {
+      margin-top: 20px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
     }
 
-    .status-card {
-      height: 58px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #2f5faf, #6b92d9);
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+    .summary-card {
+      background: #ffffff;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid #e5e7eb;
     }
 
-    .status-card:nth-child(2) { opacity: 0.9; }
-    .status-card:nth-child(3) {
-      opacity: 0.7;
-      background: var(--primary-light);
-      box-shadow: none;
+    .summary-title {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 5px;
     }
 
-    .room-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-top: 4px;
+    .summary-value {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 2px;
     }
 
-    .room-title h1 {
-      font-size: 28px;
-      margin-top: 2px;
+    .summary-sub {
+      font-size: 12px;
+      color: #9ca3af;
     }
 
-    .room-subtitle {
-      margin-top: 4px;
-      font-size: 20px;
-      color: var(--text-soft);
-    }
-
-    .room-right-label {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    /* filter row */
-
-    .filter-row {
-      margin-top: 8px;
+    .filter-bar {
+      margin: 10px 0px 10px;
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 14px;
-      color: var(--text-main);
     }
 
-    .filter-label {
-      font-weight: 600;
-    }
-
-    .filter-pill {
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    .filter-bar input, .filter-bar select {
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
       background: #ffffff;
-      font-size: 13px;
-      color: var(--text-soft);
+      border-radius: 8px;
+      font-size: 14px;
+      min-width: 180px;
     }
 
-    .date-input {
+    .btn {
+      background: #2563eb;
+      color: white;
       border: none;
-      outline: none;
-      background: transparent;
+      padding: 9px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-approve {
+      background: #15803d;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
       font-size: 13px;
-      color: var(--text-soft);
+    }
+
+    .btn-reject {
+      background: #dc2626;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 13px;
     }
 
-    .date-input::-webkit-calendar-picker-indicator {
-      cursor: pointer;
+    .tabulator {
+        width: auto;
+        border: 0px;
+        border-radius: 10px;
+        margin-right: 20px;
     }
 
-    /* chart area – ให้กราฟกินพื้นที่ที่เหลือทั้งหมด */
-
-    .chart-section {
-      margin-top: 8px;
-      flex: 1;                      /* ใช้พื้นที่ที่เหลือจากด้านบนทั้งหมด */
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      min-height: 0;               /* ป้องกัน flex overflow */
+    .tabulator .tabulator-footer .tabulator-footer-contents {
+        padding: 0px;
     }
 
-    .chart-card {
-      width: 100%;
-      max-width: 1200px;
-      background: var(--card-bg);
-      border-radius: 16px;
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
-      padding: 16px 22px 20px;
-      border: 1px solid #e5e7eb;
-
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
+    .tabulator .tabulator-footer .tabulator-page.active {
+        color: #295fae; 
     }
 
-    .chart-title {
-      font-size: 18px;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 4px;
+    .table-box {
+        padding: 0;
     }
 
-    .chart-subtitle {
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-soft);
-      margin-bottom: 10px;
+    .tabulator-header {
+        background: #f9fafb !important;
+        border-bottom: 1px solid #e5e7eb !important;
     }
 
-    .chart-wrapper {
-      flex: 1;          
-      min-height: 0;
+    .tabulator-col {
+        background: #f9fafb !important;
+        font-weight: 700;
+        font-size: 14px;
+        color: #374151;
+        border-right: none !important;
     }
 
-    #okNgChart {
-      width: 100%;
-      height: 100%;
+    .tabulator-col-title {
+        padding: 12px 8px;
     }
 
-    @media (max-width: 1200px) {
-      .app {
-        flex-direction: column;
-        height: auto;
-        min-height: 100vh;
-      }
-      .sidebar {
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        border-radius: 0;
-      }
-      .main {
-        padding: 16px;
-      }
-      .chart-card {
-        padding: 12px 14px 16px;
-      }
+    /* Row */
+    .tabulator-row {
+        border-bottom: 1px solid #f1f1f1;
+        min-height: 15px !important;
+        font-size: 14px;
+    }
+
+    .tabulator-row:hover {
+        background: #f0f7ff !important;
+    }
+
+    /* Cell */
+    .tabulator-cell {
+        padding: 10px 10px !important;
+    }
+
+    /* Pagination */
+    .tabulator-paginator {
+        padding: 15px;
+        border-top: 1px solid #e5e7eb;
+        background: #fafafa;
+    }
+
+    .btn-approve:hover {
+        background: #16a34a;
+    }
+
+    .btn-reject {
+        background: #ef4444;
+        border: none;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .btn-reject:hover {
+        background: #dc2626;
+    }
+
+    .btn-reset {
+        background: #e5e7eb;
+        color: #374151;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.2s;
+    }
+
+    .btn-reset:hover {
+        background: #d1d5db;
     }

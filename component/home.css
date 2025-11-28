@@ -24,8 +24,8 @@
 }
 
 .card {
-    width: clamp(90px, 15vw, 160px);
-    height: clamp(70px, 15vw, 140px);
+    width: clamp(80px, 15vw, 160px);
+    height: clamp(60px, 15vw, 140px);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(22px, 6vw, 60px);
+    font-size: clamp(35px, 6vw, 60px);
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45); 
