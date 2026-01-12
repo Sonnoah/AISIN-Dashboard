@@ -16,13 +16,23 @@
   /* height: 100vh; */
 }
 
+.room-layout-fac {
+  display: flex;
+  gap: 0;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
 .room-layout-home {
   display: grid;
   grid-template-columns: 1fr; 
   gap: 10px;
+  padding-left: 20px;
   margin-top: 10px;
   align-items: flex-start;
 }
+
 
 
 .room-layout-9 {

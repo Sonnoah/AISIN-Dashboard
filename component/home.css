@@ -1,17 +1,31 @@
 .home-container {
     position: relative;
-    width: 100%;
+    width: 820px;     
+    height: 550px;    
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 10px;
 }
 
-.home-img {
-    width: clamp(100%, 30vw, 100%);
-    max-width: 600px;
-    object-fit: contain;
+.factory-img {
+    max-width: 105%;
+    max-height: 100%;
+    object-fit: contain;  
     display: block;
+    object-fit: cover; 
 }
+
+
+.hr-fty {
+    margin-top: 10px;
+    opacity: 0.3; 
+}
+
+.title-fty{
+    margin-top: 10px;    
+}
+
 
 .card-container {
     position: absolute;
@@ -19,34 +33,56 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: clamp(10px, 5vw, 25px);
-    z-index: 10;
+    gap: 10%;      
+    width: 60%;   
+    justify-content: center;
 }
 
+
 .card {
-    width: clamp(80px, 15vw, 160px);
-    height: clamp(60px, 15vw, 140px);
-    border-radius: 15px;
+    width: 22%;           
+    aspect-ratio: 1 / 0.9;  
+
+    max-width: 160px;       
+    min-width: 140px;
+    
+    outline: 1.5px solid rgba(51, 51, 51, 0.034);
+
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-size: clamp(14px, 3vw, 18px);
+
+    color: #4b4b4b;
+    font-size: clamp(12px, 2.2vw, 18px);
     font-weight: bold;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+
+    box-shadow:
+    inset 6px 6px 12px rgba(0,0,0,0.25),
+    inset -6px -6px 12px rgba(255,255,255,0.35);
+    
     cursor: pointer;
     transition: 0.2s ease;
 }
 
+
 .card:hover {
     transform: translateY(-6px);
+    outline: 0px;
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card:active {
+    box-shadow:
+        inset 8px 8px 14px rgba(0,0,0,0.35),
+        inset -8px -8px 14px rgba(255,255,255,0.25);
+    transform: scale(0.97);
 }
 
 
 .card-bg {
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     background:
         linear-gradient(rgba(32, 32, 32, 0.185), rgba(16, 0, 85, 0.178)), 
         url("../Img/aisin.jpg");
@@ -67,9 +103,35 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45); 
 }
 
-@media (max-width: 480px) {
-.card-container {
-    top: 65%;
-}
 
+
+@media (max-width: 900px) {
+    .room-layout-home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .factory-img {
+        width: 100%;
+        height: 100%;
+        min-height: 320px;  
+        object-fit: contain;
+        object-fit: cover;  
+    }
+
+    .home-container {
+        width: 100%;
+        height: 340px;
+        margin-top: 10px;
+    }
+
+        .card-container {
+        width: 70%;
+        top: 65%;
+    }
+
+    .card {
+        min-width: 80px;
+        font-size: 14px;
+    }
 }
